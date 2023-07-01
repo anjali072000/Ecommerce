@@ -13,19 +13,15 @@ const FeaturedProducts = ({ type }) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas.
+          While we offer a wide range of products, we place strong emphasis on curation. We identify fashion-forward brands, vetting for style and quality, and further select styles within these brands to offer. We also place importance on selling full-price products, reducing reliance on discounting, and selling the latest season’s designs. In addition, we use digital content, personalized mobile application experiences and proprietary recommendation algorithms, to build differentiated style-driven, discovery-led experiences for consumers.
         </p>
       </div>
       <div className="bottom">
         {error
           ? "Something went wrong!"
           : loading
-          ? "loading"
-          : data?.map((item) => <Card item={item} key={item.id} />)}
+            ? "loading"
+            : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>
   );
